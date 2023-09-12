@@ -11,10 +11,10 @@ package cz.itnetwork.evidencepojistenych;
  */
 public class Pojistenec {       // Třída `Pojistenec` představuje jednotlivé pojištěnce.
 
-    private String jmeno;       // Má privátní atributy pro jméno, příjmení, věk a telefonní číslo.
-    private String prijmeni;
-    private int vek;
-    private String telefonniCislo;
+    final String jmeno;       // Má privátní atributy pro jméno, příjmení, věk a telefonní číslo.
+    final String prijmeni;
+    final int vek;
+    final String telefonniCislo;
 
     /**
      * KONSTRUKTOR pro vytváření proměnných:
