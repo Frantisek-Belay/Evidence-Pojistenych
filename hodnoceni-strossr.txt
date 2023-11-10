@@ -1,0 +1,13 @@
+Ceníme práci na projektu! 🏆 Prohlédli jsme si kód a máme k němu následující poznámky:
+
+1. Pojmenování identifikátorů - Názvy metod by měly být v přikazovacím tvaru (místo pridatPojistence() -> pridejPojistence() apod.
+2. Dodržení principů SRP a SoC - Třída Pojistenci by neměla mít v sobě interakci s uživatelem, jelikož její odpovědnost je správa dat. Interakce s uživatelem patří do hl. souboru nebo by se pro ni mohla vyčlenit samostatná třída, např. UzivatelskeRozhrani. Pokud potřebujeme předat instanci Scanneru předáváme ji v konstruktoru.
+3. Vhodný výběr datových typů - Volba v konstrukci switch typu int -> pokud nezadáme celé číslo, program vyhodí výjimku.
+4. Formátování kódu - Kromě odsazené anotace @Override je formátování kódu v pořádku.
+5. Duplicitní kód a nekonečné cykly - V aplikaci je duplicitní kód pro zadávání jména a příjmení v metodách pro přidání a vyhledání pojištěnce, který by který by mohl být vyčleněný do samostatné metody. Za předpokladu, že by tento kód měl ještě obsahovat validace a měl více řádků, které by se také pak opakovaly, je to porušení principu DRY.
+6. Validace vstupních dat - Projde zadání např. prázdného jména nebo záporné hodnoty u věku, pokud nezadáme celé číslo, program vyhodí výjimku.
+7. Logičnost a složitost - Atributy ve třídě Pojistenec nemají nastavený modifikátor viditelnost a jsou proto viditelné v rámci balíčku. Doporučuji opravit zapouzdření tak, aby byly tyto atributy označeny explicitně jako private a pak dávalo smysl přistupovat k nim pomocí getterů.
+8. Komentáře - Bylo by dobré doplnit dokumentační komentáře a ubrat klasické komentáře.
+9. Celkové hodnocení - Aplikace splňuje zadání a pro začínajícího programátora je to dobrý kus práce. Největší problém je míchání uživatelské interakce s logikou v jedné třídě a absence validací.
+
+Doporučujeme případné výtky v kódu opravit, abyste jej mohli pak prezentovat budoucímu zaměstnavateli v co nejlepší kvalitě. Pokud byste potřebovali s čímkoli pomoci, naplánujte si s námi konzultaci, rádi vám poradíme!
